@@ -1,0 +1,365 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {color: #000; text-decoration: none;}
+
+ul {list-style: none;}
+
+.content {
+    max-width: 1000px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+}
+
+.section {
+    width: 100%;
+    background: #343a40;
+}
+
+.clear {
+    width: 100%;
+    height: 1px;
+}
+
+.ustBar {
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: -10px;
+}
+
+.ustList {
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+}
+
+.ustBrands {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.altBar {
+    background: #343a40;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.altLogo {
+    width: 100px;
+}
+
+.mobileToggler {
+    
+    display: none;
+}
+
+.altList {
+    display: flex;
+    margin: 35px 0 0 0;
+}
+
+.altLink {
+    font-size: 17px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 10px;
+}
+
+.dropList {
+    opacity:0;
+    visibility: hidden;
+    transform: scaleY(0);
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    top: 110px;
+    margin-left: -430px;
+    width: 1000px;
+    height: 75%;
+    background: #343a40;
+    color: #fff;
+    top: 110px;
+}
+
+.dropLink {
+    color: #fff;
+}
+
+.altItem:hover .dropList {
+    visibility: visible;
+    opacity:1;
+    transform: scaleY(1);
+}
+
+.dropList::before {
+    position: absolute;
+    top: -8px;
+    content: '';
+    left: 42%;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #007bff transparent transparent transparent;
+    transform: rotateZ(180deg);
+}
+
+.dropPart {
+    width: 33%;
+}
+
+.dropHeader {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dropItem {
+    width: 100%;
+}
+
+.dropLink:hover {
+    width: 100%;
+}
+
+#owlSlider img {
+    width: 100%;
+}
+
+.twoNav {
+    display: flex;
+    width: 100%;
+}
+
+.twoList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+
+.twoItem, .twoLink {
+    padding: 16px 10px;
+    color: #fff;
+}
+
+.twoItem.active, .twoItem:hover {
+    position: relative;
+    background: #000;
+    color :#fff;
+    padding: 16px 10px;
+    height: 20px;
+}
+
+.twoItem.active::before {
+    position: absolute;
+    bottom: 5px;
+    content: '';
+    left: 40%;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #007bff transparent transparent transparent;
+}
+
+#owlNews {
+    margin-top: 10px;
+}
+
+#owlNews .item {
+    background: #000;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+#owlNews img {
+    height: 300px;
+}
+
+.newsText {
+    position: absolute;
+    margin: 0;
+    left: 20px; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 85%;
+    height: 100px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.threeNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.threeList {
+    padding: 20px 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threeTitle, .threeText {
+    margin: 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footerText {
+    justify-content: left;
+    color: #fff;
+}
+
+.footerText p {
+    margin: 0 24%;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 426px) {
+    .ustBar {
+        display: none;
+    }
+    
+    .content {
+        max-width: 425px;
+        width: 100%;
+    }
+
+    .altBar {
+        display: block;
+        height: 100px;
+    }
+
+    .mobileList {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .mobileToggler {
+        margin-top: 25px;
+        display: block;
+    }
+
+    .altList {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        flex-direction: column;
+        background-color: #343a40;
+        margin: 0;
+        z-index: 3;
+        border-top: 1px solid #fff;
+    }
+    
+    .altItem {
+        padding: 15px 10px;
+    }
+
+    .altLink {
+        padding: 0;
+        width: 100%;
+    }
+
+    .dropList {
+        opacity:0;
+        visibility: hidden;
+        transform: scaleY(0);
+        position: absolute;
+        display: flex;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        width: 100%;
+        background: #343a40;
+        color: #fff;
+        margin: 0;
+        flex-direction: column;
+        overflow-y: scroll;
+    }
+
+    .dropList::before {
+        display: none;
+    }
+
+    .dropPart { width: 100%;}
+
+    #owlSlider {
+        display: block;
+    }
+
+    .twoNav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .twoList {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .twoItem {
+        padding: 15px 10px;
+    }
+
+    .twoItem.active {
+        background: #000;
+    }
+
+    .twoItem.active::before {
+        position: absolute;
+        top: 42%;
+        left: 28%;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: #007bff transparent transparent transparent;
+    }
+
+    .threeNav {
+        display: block;
+    }
+
+    .clear {height: 0.2px;}
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    .footerText {
+        text-align: center;
+    }
+}
